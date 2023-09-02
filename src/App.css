@@ -1,0 +1,115 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background-color: #0B1320;
+  /* background-color: white; */
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* PLACEHOLDER Loading Animation (CSS Only, 1 DIV) */
+
+:root {
+  --color-bg: #121212; 
+  --color-bar: #7f7f7f;
+  --gradient: linear-gradient( 72deg, var(--color-bar), var(--color-bg) );
+}
+
+.placeholder {
+  position: relative;
+  width: 25em;
+  max-width: 100%;
+  padding-bottom: 14em; /* 14 rows */
+  font-size: 20px; /* size of placeholder */
+  background-image: var( --gradient );
+  background-size: 400% 400%;
+  animation: loading 1.5s ease-in-out infinite;
+  
+  /* hide inner text */
+  text-indent: -9999px;                 
+  white-space: nowrap;  
+  overflow: hidden;
+    
+  /* optional centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.placeholder:before, .placeholder:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+}
+
+/* placeholder rows */
+.placeholder:after {
+  width: 100%;
+  height: 1em;
+  top: -1em;
+  box-shadow: /* length, row (in em)*/
+    22em 1em var(--color-bg), 
+    0 2em var(--color-bg), 
+    12em 3em var(--color-bg),
+    0 4em var(--color-bg),
+    0 5em var(--color-bg), 
+    0 6em var(--color-bg),
+    25em 7em var(--color-bg), 
+    0 8em var(--color-bg),
+    21em 9em var(--color-bg), 
+    0 10em var(--color-bg),
+    24em 11em var(--color-bg), 
+    0 12em var(--color-bg),
+    18em 13em var(--color-bg), 
+    0 14em var(--color-bg);
+}
+
+
+@keyframes loading { 
+  0% { background-position: 70% 0%; }
+  50% { background-position: 30% 100%; }
+  100% { background-position: 70% 0%; }
+}
+
+.backIcon {
+  background: transparent !important; 
+  border: none !important; 
+}
