@@ -1,3 +1,3 @@
-const BASE_API_URL = 'http://68.183.41.193/'; 
+const BASE_API_URL = 'https://yidesign.click'; 
 
 export { BASE_API_URL };
