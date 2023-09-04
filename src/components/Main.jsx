@@ -84,7 +84,7 @@ const Main = () => {
           >
             <div className="w-screen lg:w-[75%] lg:max-h-[100vh] object-contain object-fit relative">
               <div
-                className=" text-white absolute bottom-5 text-xl 
+                className=" text-white absolute bottom-5 lg:text-xl 
                             left-1/2 translate-x-[-50%] 
                             md:left-1/2 md:translate-x-[-50%]
                             lg:left-10 lg:translate-x-0
@@ -94,16 +94,16 @@ const Main = () => {
                 Astronomy Picture of Today
               </div>
 
-              <LazyLoadImage
+              <img
                 effect="blur"
                 src={data?.url}
                 alt={data?.title}
-                className="w-screen lg:h-screen z-0"
+                className="w-screen lg:h-screen z-0 h-[20%] object-cover object-center"
               />
             </div>
 
             <motion.div
-              className="text-white text-left lg:w-[25%] p-5 w-screen flex flex-col max-h-screen
+              className="text-white text-left lg:w-[25%] p-5 w-screen flex flex-col lg:max-h-screen
                             justify-center content-center
                             lg:justify-start lg:content-start"
               initial="hidden"

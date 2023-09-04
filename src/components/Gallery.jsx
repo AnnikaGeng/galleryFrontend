@@ -109,7 +109,6 @@ const Gallery = () => {
           >
             {endOfPage ? "No more data" : "Load more data"}
           </p>
-          )
         </motion.div>
       )}
     </div>
