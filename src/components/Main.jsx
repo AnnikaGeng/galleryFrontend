@@ -85,7 +85,7 @@ const Main = () => {
             <div className="w-screen lg:w-[75%] lg:max-h-[100vh] object-contain object-fit relative">
               <div
                 className=" text-white absolute bottom-5 lg:text-xl 
-                            left-1/2 translate-x-[-50%] 
+                            hidden lg:block md:block
                             md:left-1/2 md:translate-x-[-50%]
                             lg:left-10 lg:translate-x-0
                             z-10
