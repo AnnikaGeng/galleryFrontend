@@ -81,7 +81,7 @@ const Detail = () => {
               <img
                 src={`${BASE_API_URL}/${data.path}`}
                 alt={data?.title}
-                className="w-full h-full object-fit lg:max-w-[75vw] lg:max-h-screen"
+                className="w-full h-full object-cover object-center lg:max-w-[75vw] lg:max-h-screen"
                 loading="lazy"
               />
             </motion.div>
