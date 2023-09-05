@@ -13,32 +13,16 @@ const Gallery = () => {
     setIsLoading(true);
 
     try {
-      // use cache first
-      const cachedData = localStorage.getItem(`page${page + 1}`);
-
-      if (cachedData) {
-        const parsedData = JSON.parse(cachedData);
-        if (parsedData.length < 10) {
-          setEndOfPage(true);
-        }
-        setData([...data, ...parsedData]);
-        setPage(page + 1);
-        setIsLoading(false);
-      } else {
-        // Fetch the data from the API
-        const response = await fetch(`${BASE_API_URL}/?page=${page + 1}`);
-        const responseJson = await response.json();
-        if (responseJson.length < 10) {
-          setEndOfPage(true);
-        }
-
-        // Save the new data in localStorage for the next page
-        localStorage.setItem(`page${page + 1}`, JSON.stringify(responseJson));
-
-        setData([...data, ...responseJson]);
-        setPage(page + 1);
-        setIsLoading(false);
+      // Fetch the data from the API
+      const response = await fetch(`${BASE_API_URL}/?page=${page + 1}`);
+      const responseJson = await response.json();
+      if (responseJson.length < 10) {
+        setEndOfPage(true);
       }
+
+      setData([...data, ...responseJson]);
+      setPage(page + 1);
+      setIsLoading(false);
     } catch (error) {
       console.error("Error while fetching the image. Try again later.");
       setIsLoading(false);
